@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+        mariadb:
+                image: mariadb:10.3
+                environment:
+                        - MYSQL_ROOT_PASSWORD=tdd
+                        - MYSQL_DATABASE=tdd
+                        - MYSQL_USER=tdd
+                        - MYSQL_PASSWORD=tdd
+                ports:
+                        - 3306:3306
+
+        cars:
+               build: .
+               container_name: cars
+               ports:
+                       - 8080:8080
+               depends_on:
+                       - mariadb
