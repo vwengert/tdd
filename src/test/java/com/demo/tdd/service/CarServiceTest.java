@@ -3,7 +3,6 @@ package com.demo.tdd.service;
 import com.demo.tdd.CarNotFoundException;
 import com.demo.tdd.model.Car;
 import com.demo.tdd.repository.CarRepository;
-import com.demo.tdd.service.CarService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -39,8 +38,8 @@ public class CarServiceTest {
     @Test
     public void getCarDetails_whenCarNotFound() throws Exception {
         given(carRepository.findByName("prius")).willReturn(null);
-        Exception exception = assertThrows(CarNotFoundException.class, () -> {
-
+            
+        assertThrows(CarNotFoundException.class, () -> {
             carService.getCarDetails("prius");
         });
     }

@@ -1,7 +1,6 @@
 package com.demo.tdd.controller;
 
 import com.demo.tdd.CarNotFoundException;
-import com.demo.tdd.controller.CarController;
 import com.demo.tdd.model.Car;
 import com.demo.tdd.service.CarService;
 import org.junit.Test;

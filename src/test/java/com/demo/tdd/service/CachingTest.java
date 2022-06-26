@@ -2,7 +2,6 @@ package com.demo.tdd.service;
 
 import com.demo.tdd.model.Car;
 import com.demo.tdd.repository.CarRepository;
-import com.demo.tdd.service.CarService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
